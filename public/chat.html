@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/chat.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <title>Chat com socket.io</title>
+</head>
+<body>
+  <div class="form">
+    <div>
+      <h2 id="title_name"></h2>
+      <p id="description_name"></p>
+    </div>
+
+    <div class="box-message" id="box-message"></div>
+    <input id="input_message" type="text" name="message" placeholder="Digite para enviar uma mensagem...">
+    <button type="button" id="loggout_button">Sair da sala</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

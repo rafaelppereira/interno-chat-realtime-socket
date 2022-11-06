@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/chat.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <title>Chat com socket.io</title>
+</head>
+<body>
+  <form class="form" action="chat.html">
+    <div>
+
+      <div class="title">
+        <h2>Chat em tempo real</h2>
+        <p>Criei esse projeto com o objetivo de ter um canal de comunicação interno.</p>
+      </div>
+
+      <div class="select-options">
+        <div>
+          <select name="select_room" id="select_room">
+            <option value="-1">Selecione a sala</option>
+            <option value="node">Node</option>
+            <option value="java">Java</option>
+            <option value="reactjs">ReactJS</option>
+            <option value="elixir">elixir</option>
+          </select>
+        </div>
+  
+        <div class="input-user">
+          <label>Nome</label>
+          <input type="text" name="username" placeholder="Digite o nome do seu usuário">
+        </div>
+  
+        <div>
+          <button type="submit">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
