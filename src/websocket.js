@@ -2,8 +2,10 @@ const { io } = require('./http');
 
 const users = [];
 const messages = [];
+const usersjoin = [];
 
 io.on("connection", socket => {
+
   
   socket.on("select_room", (data, callback) => {
     socket.join(data.room);
@@ -36,9 +38,15 @@ io.on("connection", socket => {
     io.to(data.room).emit("message", message);
   });
 
+
 });
 
 function getMessagesRoom(room) {
   const messagesRoom = messages.filter(message => message.room === room);
   return messagesRoom;
+}
+
+function getUsersRoom(room) {
+  const usersRoom = users.filter(user => user.room === room);
+  return usersRoom;
 }

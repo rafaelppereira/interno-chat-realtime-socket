@@ -8,7 +8,7 @@ const room = urlSearch.get("select_room");
 socket.emit("select_room", {
   username,
   room
-}, messages => {
+}, (messages) => {
   messages.forEach(message => createMessage(message));
 });
 
@@ -32,6 +32,19 @@ document.getElementById("input_message").addEventListener("keypress", (event) =>
   }
 })
 
+document.getElementById("send_message").addEventListener("click", (event) => {
+  const message = document.getElementById("input_message").value;
+
+  const data = {
+    room,
+    message,
+    username
+  }
+
+  socket.emit("message", data);
+  document.getElementById("input_message").value = "";
+})
+
 socket.on("message", (data) => {
   createMessage(data);
 });
@@ -49,4 +62,5 @@ function createMessage(data) {
 
 document.getElementById("loggout_button").addEventListener("click", (event) => {
   window.location.href = "index.html";
-})
+});
+

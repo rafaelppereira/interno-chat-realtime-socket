@@ -15,13 +15,19 @@
 <body>
   <div class="form">
     <div>
-      <h2 id="title_name"></h2>
-      <p id="description_name"></p>
+      <div>
+        <h2 id="title_name"></h2>
+        <p id="description_name"></p>
+      </div>
+  
+      <span id="users_online"></span>
     </div>
+    <button type="button" id="loggout_button">Sair da sala</button>
 
     <div class="box-message" id="box-message"></div>
     <input id="input_message" type="text" name="message" placeholder="Digite para enviar uma mensagem...">
-    <button type="button" id="loggout_button">Sair da sala</button>
+    <button type="button" id="send_message">Enviar mensagem</button>
+    
   </div>
 
   <script src="/socket.io/socket.io.js"></script>
